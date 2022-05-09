@@ -1,0 +1,16 @@
+{% extends "cars_and_motorcycles/index.html" %}
+
+{% block title %}Voitures & Motos | Bécanes{% endblock %}
+
+{% block content %}
+<p class="sectionTitle">La liste des motos</p>
+<ul>
+    {% for l in liste %}
+        <li class="listes">
+            {{l}} 
+            <a href="/cars_and_motorcycles/motorcycle_update/{{l.id}}" class="misc">Modifier</a>
+            <a href="/cars_and_motorcycles/delete_motorcycle/{{l.id}}" class="misc">Supprimer</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

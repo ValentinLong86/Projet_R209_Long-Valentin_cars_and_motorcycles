@@ -1,0 +1,12 @@
+{% extends "cars_and_motorcycles/index.html" %}
+
+{% block title %}Voitures & Motos | Modifier{% endblock %}
+
+{% block content %}
+<h2>Modifier la moto</h2>
+<form method="post" action="/cars_and_motorcycles/traitement_motorcycle_update/{{id}}/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Enregistrer les modification"\>
+</form>
+{% endblock %}

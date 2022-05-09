@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
+body{
+	margin: 0%;
+	padding: 0%;
+	background-color: grey;
+}
+
+#root{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+header{
+	background-color: yellow;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+}
+
+h1{
+	text-align: center;
+	font-family: "Bebas Neue";
+	font-size: 6em;
+	margin: 0%;
+}
+
+h2{
+	font-family: "Quicksand";
+	font-size: 1,1em;
+
+}
+
+nav{
+    display: flex;
+	justify-content: center;
+	padding: 1%;
+	padding: 2%;
+}
+
+.menu{
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Quicksand';
+	font-size: 1.2em;
+	margin: 1%;
+	padding: 1%;
+	color: white;
+	border: 2px solid white;
+	border-radius: 10px;
+}
+
+.menu:hover{
+	transition: 0.3s;
+	border-color: white;
+	color: grey;
+	background-color: white;
+}
+
+.sectionTitle{
+	font-family: "arial";
+}
+
+.misc{
+	float: right;
+	margin-left: 1%;
+	text-decoration: none;
+	font-family: Quicksand;
+	color: blue;
+}
+
+.misc:hover{
+	color: red;
+}
+
+.listes{
+	border-bottom: 5px inset black;
+	font-family: "arial";
+	font-size: 0.9em;
+}
+
+.subtitle{
+	margin-top: 10%;
+}
+
+form{
+	font-family: "arial";
+	list-style-type: none;
+}
+
+input[type=text]{
+	width: 50%;
+	padding: 12px 20px;
+  	margin-right: 5%;
+  	display: block;
+  	margin: 8px 0;
+  	border: 1px solid #ccc;
+  	border-radius: 8px;
+}
+
+input[type=number]{
+	width: 50%;
+  	padding: 12px 20px;
+  	margin-right: 5%;
+  	display: block;
+  	margin: 8px 0;
+  	border: 1px solid #ccc;
+  	border-radius: 8px;
+}
+
+input[type=submit]{
+	background-color: white;
+  	border: none;
+  	padding: 16px 32px;
+  	text-decoration: none;
+  	margin: 4px 2px;
+  	border-radius: 5px;
+  	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	background-color: grey;
+	transition: 0.3s;
+	color: white;
+}
+
+
+section{
+	background-color: #c9c8c5;
+	border-bottom: 0px;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding: 5%;
+	border-radius: 20px;
+	margin-bottom: 10%;
+}

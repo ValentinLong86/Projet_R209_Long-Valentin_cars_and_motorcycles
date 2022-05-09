@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+	{% load static %}
+	<meta charset="utf-8">
+	<title>{% block title %}Voitures & Motos{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'cars_and_motorcycles/styles.css'%}">
+</head>
+<body>
+	<div id="root">
+		<header>
+			<h1>Voitures & Motos</h1>
+		</header>
+		<nav>
+			<a href="/cars_and_motorcycles/index/" class="menu">Menu Principal</a>
+			<a href="/cars_and_motorcycles/cars/" class="menu">Lister les modèles de voiture</a>
+			<a href="/cars_and_motorcycles/motorcycles/" class="menu">Lister les modèles de motos</a>
+			<a href="/cars_and_motorcycles/add_object/" class="menu">Ajouter un modèle</a>
+			<a href="/cars_and_motorcycles/add_marque/" class="menu">Ajouter une marque</a>
+		</nav>
+		<section>
+			{% block content %}
+			<p class="sectionTitle">Le menu principal</p>
+			{% endblock %}
+		</section>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "cars_and_motorcycles/index.html" %}
+
+{% block title %}Voitures & Motos | Ajouter{% endblock %}
+
+{% block content %}
+<h2>Formulaire pour ajouter une marque</h2>
+<form method="post" action="/cars_and_motorcycles/traitement_add_marque/">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Ajouter"\>
+</form>
+{% endblock %}
