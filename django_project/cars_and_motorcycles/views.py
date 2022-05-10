@@ -8,14 +8,6 @@ def index(request):
     return render(request, 'cars_and_motorcycles/index.html')
 
 
-def cars(request):
-    return render(request, 'cars_and_motorcycles/cars.html')
-
-
-def motorcycles(request):
-    return render(request, 'cars_and_motorcycles/motorcycles.html')
-
-
 def add_object(request):
     if request.method == "POST":
         form = carForm(request)
@@ -122,18 +114,29 @@ def traitement_add_marque(request):
     pform = marqueForm(request.POST)
     if pform.is_valid():
         marque = pform.save()
-        return render(request, "cars_and_motorcycles/index.html", {"marque": marque})  # !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        return HttpResponseRedirect("/cars_and_motorcycles/add_marque/")
     else:
         return render(request, "cars_and_motorcycles/marques.html", {"form": pform})
 
 
 def delete_marque(request, id):
-    pass
+    marque = models.marque.objects.get(pk=id)
+    marque.delete()
+    return HttpResponseRedirect("/cars_and_motorcycles/add_marque/")
 
 
 def update_marque(request, id):
-    pass
+    marque = models.marque.objects.get(pk=id)
+    form = marqueForm(marque.dico())
+    return render(request, "cars_and_motorcycles/marque_update.html", {"form": form, "id": id})
 
 
 def traitement_update_marque(request, id):
-    pass
+    lform = marqueForm(request.POST)
+    if lform.is_valid():
+        marque = lform.save(commit=False)
+        marque.id = id
+        marque.save()
+        return HttpResponseRedirect("/cars_and_motorcycles/add_marque/")
+    else:
+        return render(request, "cars_and_motorcycles/marque_update.html", {"lform": lform, "id": id})

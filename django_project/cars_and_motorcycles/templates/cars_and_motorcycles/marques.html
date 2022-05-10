@@ -14,8 +14,8 @@
     {% for l in liste %}
         <li class="listes">
             {{l}}
-            <a href="#" class="misc">Modifier</a>
-            <a href="#" class="misc">Supprimer</a>
+            <a href="/cars_and_motorcycles/update_marque/{{l.id}}" class="misc">Modifier</a>
+            <a href="/cars_and_motorcycles/delete_marque/{{l.id}}" class="misc">Supprimer</a>
         </li>
     {% endfor %}
 </ul>
