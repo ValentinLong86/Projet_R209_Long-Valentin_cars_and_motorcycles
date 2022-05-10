@@ -3,13 +3,13 @@
 {% block title %}Voitures & Motos | Bécanes{% endblock %}
 
 {% block content %}
-<p class="sectionTitle">La liste des motos</p>
+<h2>La liste des motos</h2>
 <ul>
     {% for l in liste %}
-        <li class="listes">
+        <li class="lists">
             {{l}} 
-            <a href="/cars_and_motorcycles/motorcycle_update/{{l.id}}" class="misc">Modifier</a>
-            <a href="/cars_and_motorcycles/delete_motorcycle/{{l.id}}" class="misc">Supprimer</a>
+            <a href="/cars_and_motorcycles/motorcycle_update/{{l.id}}" class="misc_options">Modifier</a>
+            <a href="/cars_and_motorcycles/delete_motorcycle/{{l.id}}" class="misc_options">Supprimer</a>
         </li>
     {% endfor %}
 </ul>

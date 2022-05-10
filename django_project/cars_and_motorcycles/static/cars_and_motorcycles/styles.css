@@ -28,8 +28,7 @@ h1{
 
 h2{
 	font-family: "Quicksand";
-	font-size: 1,1em;
-
+	font-size: 1,1em
 }
 
 nav{
@@ -39,7 +38,7 @@ nav{
 	padding: 2%;
 }
 
-.menu{
+.menu_buttons{
 	text-decoration: none;
 	text-align: center;
 	font-family: 'Quicksand';
@@ -51,18 +50,14 @@ nav{
 	border-radius: 10px;
 }
 
-.menu:hover{
+.menu_buttons:hover{
 	transition: 0.3s;
 	border-color: white;
 	color: grey;
 	background-color: white;
 }
 
-.sectionTitle{
-	font-family: "arial";
-}
-
-.misc{
+.misc_options{
 	float: right;
 	margin-left: 1%;
 	text-decoration: none;
@@ -70,18 +65,14 @@ nav{
 	color: blue;
 }
 
-.misc:hover{
+.misc_options:hover{
 	color: red;
 }
 
-.listes{
+.lists{
 	border-bottom: 5px inset black;
 	font-family: "arial";
 	font-size: 0.9em;
-}
-
-.subtitle{
-	margin-top: 10%;
 }
 
 form{
@@ -89,7 +80,7 @@ form{
 	list-style-type: none;
 }
 
-input[type=text]{
+input[type=text], input[type=number]{
 	width: 50%;
 	padding: 12px 20px;
   	margin-right: 5%;
@@ -99,32 +90,33 @@ input[type=text]{
   	border-radius: 8px;
 }
 
-input[type=number]{
-	width: 50%;
-  	padding: 12px 20px;
-  	margin-right: 5%;
-  	display: block;
-  	margin: 8px 0;
-  	border: 1px solid #ccc;
-  	border-radius: 8px;
-}
-
 input[type=submit]{
-	background-color: white;
+	background-color: #42a14c;
   	border: none;
   	padding: 16px 32px;
   	text-decoration: none;
   	margin: 4px 2px;
   	border-radius: 5px;
+  	color: white;
   	cursor: pointer;
+  	box-shadow: 3px 3px #99a89b;
 }
 
 input[type=submit]:hover{
-	background-color: grey;
 	transition: 0.3s;
 	color: white;
 }
 
+#id_marque{
+	display: block;
+  	border: none;
+  	padding: 15px;
+  	text-decoration: none;
+  	margin: 4px 2px;
+  	border-radius: 5px;
+  	cursor: pointer;
+  	width: 30%;
+}
 
 section{
 	background-color: #c9c8c5;
