@@ -9,4 +9,14 @@
     {{ form.as_p }}
     <input type="submit" value="Ajouter"\>
 </form>
+<h2>Liste des marques disponibles</h2>
+<ul>
+    {% for l in liste %}
+        <li class="listes">
+            {{l}}
+            <a href="#" class="misc">Modifier</a>
+            <a href="#" class="misc">Supprimer</a>
+        </li>
+    {% endfor %}
+</ul>
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import motorcycleForm, carForm
+from .forms import motorcycleForm, carForm, marqueForm
 from . import models
 
 
@@ -105,10 +105,35 @@ def delete_motorcycle(request, id):
 
 
 def add_marque(request):
-
-    pass
+    liste = models.marque.objects.all()
+    if request.method == "POST":
+        form = marqueForm(request)
+        if form.is_valid():
+            marque = form.save()
+            return render(request, "cars_and_motorcycles/index.html", {"marque": marque})  #!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        else:
+            return render(request, "cars_and_motorcycles/marques.html", {"form": form, "liste": liste})
+    else:
+        form = marqueForm()
+        return render(request, "cars_and_motorcycles/marques.html", {"form": form, "liste": liste})
 
 
 def traitement_add_marque(request):
+    pform = marqueForm(request.POST)
+    if pform.is_valid():
+        marque = pform.save()
+        return render(request, "cars_and_motorcycles/index.html", {"marque": marque})  # !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    else:
+        return render(request, "cars_and_motorcycles/marques.html", {"form": pform})
+
+
+def delete_marque(request, id):
     pass
 
+
+def update_marque(request, id):
+    pass
+
+
+def traitement_update_marque(request, id):
+    pass
