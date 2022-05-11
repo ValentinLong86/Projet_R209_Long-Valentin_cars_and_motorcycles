@@ -4,13 +4,13 @@
 
 {% block content %}
 <h2>Ajouter une voiture</h2>
-<form method="post" action="/cars_and_motorcycles/traitement_add_object/">
+<form method="post" action="/cars_and_motorcycles/t_add_object/">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Ajouter"\>
 </form>
 <h2>Ajouter une moto</h2>
-<form method="post" action="/cars_and_motorcycles/traitement_add_object/">
+<form method="post" action="/cars_and_motorcycles/t_add_object/">
     {% csrf_token %}
     {{ form2.as_p }}
     <input type="submit" value="Ajouter"\>

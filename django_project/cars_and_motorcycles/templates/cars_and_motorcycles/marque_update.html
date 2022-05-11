@@ -4,7 +4,7 @@
 
 {% block content %}
 <h2>Modifier la marque</h2>
-<form method="post" action="/cars_and_motorcycles/traitement_update_marque/{{id}}/">
+<form method="post" action="/cars_and_motorcycles/t_update_marque/{{id}}/">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Enregistrer les modifications"\>

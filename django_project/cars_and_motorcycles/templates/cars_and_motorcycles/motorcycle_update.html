@@ -4,7 +4,7 @@
 
 {% block content %}
 <h2>Modifier la moto</h2>
-<form method="post" action="/cars_and_motorcycles/traitement_motorcycle_update/{{id}}/">
+<form method="post" action="/cars_and_motorcycles/t_motorcycle_update/{{id}}/">
     {% csrf_token %}
     {{ form.as_ul }}
     <input type="submit" value="Enregistrer les modifications"\>

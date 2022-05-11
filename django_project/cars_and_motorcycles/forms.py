@@ -15,10 +15,9 @@ class marqueForm(ModelForm):
 class carForm(ModelForm):
     class Meta:
         model = models.car
-        fields = ("name", "designer", "horses", "release_date", "marque")
+        fields = ("name", "horses", "release_date", "marque")
         labels = {
             "name": _("Modèle"),
-            "designer": _("Concepteur"),
             "horses": _("Nombre de cheveaux"),
             "release_date": _("Année de sortie"),
             "marque": _("Marque de la voiture"),
@@ -28,10 +27,9 @@ class carForm(ModelForm):
 class motorcycleForm(ModelForm):
     class Meta:
         model = models.motorcycle
-        fields = ("name", "designer", "cylinder", "release_date")
+        fields = ("name", "cylinder", "release_date")
         labels = {
             "name": _("Modèle"),
-            "designer": _("Concepteur"),
             "cylinder": _("Cylindrée"),
             "release_date": _("Année de sortie"),
         }
