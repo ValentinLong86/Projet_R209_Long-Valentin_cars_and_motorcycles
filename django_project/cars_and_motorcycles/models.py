@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class marque(models.Model):
+class car_marque(models.Model):
     marque = models.CharField(max_length=100, blank=False)
 
     def __str__(self):
@@ -17,7 +17,7 @@ class car(models.Model):
     name = models.CharField(max_length=100, blank=False)
     horses = models.IntegerField(blank=False)
     release_date = models.IntegerField(blank=True)
-    marque = models.ForeignKey(marque, on_delete=models.CASCADE, null=True)
+    marque = models.ForeignKey(car_marque, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f"Modèle: {self.name} | Cheveaux: {self.horses} | Année de sortie: {self.release_date} | Marque : {self.marque}"

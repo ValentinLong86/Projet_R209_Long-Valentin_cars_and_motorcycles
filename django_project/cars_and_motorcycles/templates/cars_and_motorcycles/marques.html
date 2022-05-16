@@ -4,7 +4,7 @@
 
 {% block content %}
 <h2>Ajouter une marque de voiture</h2>
-<form method="post" action="/cars_and_motorcycles/t_add_marque/">
+<form method="post" action="/cars_and_motorcycles/t_add_car_marque/">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Ajouter"\>
@@ -14,8 +14,8 @@
     {% for l in liste %}
         <li class="lists">
             {{l}}
-            <a href="/cars_and_motorcycles/update_marque/{{l.id}}" class="misc_options">Modifier</a>
-            <a href="/cars_and_motorcycles/delete_marque/{{l.id}}" class="misc_options">Supprimer</a>
+            <a href="/cars_and_motorcycles/update_car_marque/{{l.id}}" class="misc_options">Modifier</a>
+            <a href="/cars_and_motorcycles/delete_car_marque/{{l.id}}" class="misc_options">Supprimer</a>
         </li>
     {% endfor %}
 </ul>

@@ -3,9 +3,9 @@ from django.utils.translation import gettext_lazy as _
 from . import models
 
 
-class marqueForm(ModelForm):
+class carMarqueForm(ModelForm):
     class Meta:
-        model = models.marque
+        model = models.car_marque
         fields = ("marque",)
         labels = {
             "marque": _("Marque de la voiture"),
