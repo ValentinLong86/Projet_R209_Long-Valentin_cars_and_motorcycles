@@ -1,5 +1,7 @@
 {% extends "cars_and_motorcycles/index.html" %}
 
+{% load static %}
+
 {% block title %}Voitures & Motos | Ajouter{% endblock %}
 
 {% block content %}
@@ -19,4 +21,7 @@
         </li>
     {% endfor %}
 </ul>
+<div id="imgMarqueDiv">
+    <img id="imgMarques" src="{%static 'cars_and_motorcycles/media/logos.png'%}">
+</div>
 {% endblock %}

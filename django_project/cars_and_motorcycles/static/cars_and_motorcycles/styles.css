@@ -47,6 +47,43 @@ section{
 	margin-bottom: 10%;
 }
 
+#mainMenu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h3, h4{
+	font-family: 'Quicksand';
+	font-size: 2em;
+}
+
+h4{
+	font-size: 1.5em;
+}
+
+article{
+	margin: 2%;
+	text-align: center;
+}
+
+.submenu{
+	text-decoration: none;
+	font-size: 1.2em;
+	font-family: 'Quicksand';
+	margin-left: 3%;
+	color: blue;
+}
+
+.submenu:hover{
+	color: red;
+}
+
+.imgIcons{
+	width: 10%;
+	vertical-align: middle;
+}
+
 .menu_buttons{
 	text-decoration: none;
 	text-align: center;
@@ -124,4 +161,12 @@ input[type=submit]:hover{
   	margin: 4px 2px;
   	border-radius: 5px;
   	width: 30%;
+}
+
+#imgMarqueDiv{
+	text-align: center;
+}
+
+#imgMarques{
+	width: 80%;
 }

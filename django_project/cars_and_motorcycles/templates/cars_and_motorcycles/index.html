@@ -12,7 +12,7 @@
 			<h1>Voitures & Motos</h1>
 		</header>
 		<nav>
-			<a href="/cars_and_motorcycles/index/" class="menu_buttons">Menu Principal</a>
+			<a href="/cars_and_motorcycles/index/" class="menu_buttons">Accueil</a>
 			<a href="/cars_and_motorcycles/cars_list/" class="menu_buttons">Lister les modèles de voiture</a>
 			<a href="/cars_and_motorcycles/motorcycles_list/" class="menu_buttons">Lister les modèles de motos</a>
 			<a href="/cars_and_motorcycles/add_object/" class="menu_buttons">Ajouter un modèle</a>
@@ -20,7 +20,28 @@
 		</nav>
 		<section>
 			{% block content %}
-			<h2>Le menu principal</h2>
+			<div id="mainMenu">
+				<article>
+					<h3>Bienvenue dans Voiture & Motos</h3>
+					<h4>Le site repertoriant les modèles de voitures et de motos !</h4>
+				</article>
+				<article>
+					<img class="imgIcons" src="{%static 'cars_and_motorcycles/media/moto.png'%}">
+					<a href="/cars_and_motorcycles/motorcycles_list/" class="submenu">Les motos</a>
+				</article>
+				<article>
+					<img class="imgIcons" src="{%static 'cars_and_motorcycles/media/voiture.png'%}">
+					<a href="/cars_and_motorcycles/cars_list/" class="submenu">Les voitures</a>
+				</article>
+				<article>
+					<img class="imgIcons" src="{%static 'cars_and_motorcycles/media/plus.png'%}">
+					<a href="/cars_and_motorcycles/add_object/" class="submenu">Ajouter un modèle de voiture/moto</a>
+				</article>
+				<article>
+					<img class="imgIcons" src="{%static 'cars_and_motorcycles/media/plus.png'%}">
+					<a href="/cars_and_motorcycles/add_marque/" class="submenu">Ajouter une marque/constructeur</a>
+				</article>
+			</div>
 			{% endblock %}
 		</section>
 	</div>
